@@ -9,7 +9,7 @@ public class TestController {
 
 	@GetMapping("/hello")
 	public String helloWorld(@RequestParam String userId) {
-//		System.out.println("test");`11
+//		System.out.println("test");`1
 		return "Hello World" + userId;
 	}
 }
