@@ -5,7 +5,7 @@ name: CI/CD using github actions & docker
 #Not Working
 on:
   push:
-    branches: [ master, feature ]
+    branches: [ master, feature/** ]
 
 permissions:
   contents: read
