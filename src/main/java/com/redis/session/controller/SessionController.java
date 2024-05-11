@@ -24,6 +24,7 @@ public class SessionController {
 
 	@GetMapping("/user/name")
 	public String getName(HttpSession session) {
+
 		User user = (User) session.getAttribute(SessionConst.LOGIN_USER);
 		return user.email();
 	}
