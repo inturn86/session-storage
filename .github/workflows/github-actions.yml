@@ -6,8 +6,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    types: [ opened, reopened ]
-    branches: [ feature/** ]
+    branches: [ master ]
 permissions:
   contents: read
 
