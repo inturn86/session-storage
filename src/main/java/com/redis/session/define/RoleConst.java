@@ -8,4 +8,5 @@ public class RoleConst {
 	public final static String ROLE_ADMIN = "ROLE_ADMIN";
 	public final static String ROLE_USER = "ROLE_USER";
 	public final static String ROLE_WORKER = "ROLE_WORKER";
+	public final static String ROLE_WORKE1R = "ROLE_WORKER";
 }
