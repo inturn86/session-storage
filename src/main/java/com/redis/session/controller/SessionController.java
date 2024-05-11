@@ -4,11 +4,13 @@ import com.redis.session.define.RoleConst;
 import com.redis.session.define.SessionConst;
 import com.redis.session.domain.user.User;
 import jakarta.servlet.http.HttpSession;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController
+@Slf4j
 public class SessionController {
 	@PostMapping("/user/login")
 	public String login(@RequestBody User user, HttpSession session) {
@@ -18,6 +20,7 @@ public class SessionController {
 
 	@PostMapping("/user/logout")
 	public String logout(HttpSession session) {
+		log.error("login ");
 		session.removeAttribute(SessionConst.LOGIN_USER);
 		return session.getId();
 	}
@@ -26,6 +29,7 @@ public class SessionController {
 	public String getName(HttpSession session) {
 
 		User user = (User) session.getAttribute(SessionConst.LOGIN_USER);
+
 		return user.email();
 	}
 
