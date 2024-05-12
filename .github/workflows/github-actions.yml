@@ -19,6 +19,14 @@ jobs:
       # Repository로 부터 CI 수행 서버로 코드를 내려받는 Action
       - uses: actions/checkout@v3
 
+      # name은 step의 이름
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3 #jdk를 다운 받고 캐싱하는 action
+        with:
+          #action에 전달하는 input을 정의하는 곳
+          java-version: '17'
+          distribution: 'zulu'
+
       # gradle caching - 빌드 시간 향상
       - name: Gradle Caching
         uses: actions/cache@v3
