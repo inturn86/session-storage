@@ -20,8 +20,6 @@ public class SessionController {
 
 	@PostMapping("/user/logout")
 	public String logout(HttpSession session) {
-		log.error("login   ");
-		log.error("login   ");
 		session.removeAttribute(SessionConst.LOGIN_USER);
 		return session.getId();
 	}
