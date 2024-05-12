@@ -16,6 +16,9 @@ jobs:
     # job에서 수행하는 step을 정의하는 곳
     steps:
 
+      # Repository로 부터 CI 수행 서버로 코드를 내려받는 Action
+      - uses: actions/checkout@v3
+
       # gradle caching - 빌드 시간 향상
       - name: Gradle Caching
         uses: actions/cache@v3
